@@ -1276,6 +1276,7 @@
 
   // Dúvidas e sugestões: monta o e-mail (a página não envia nada sozinha).
   const EMAIL_CONTATO = "nicole.peixoto@fazenda.mg.gov.br";
+  const EMAIL_COPIA = ["steplanejamento@fazenda.mg.gov.br", "digi@fazenda.mg.gov.br"];
   function textoContato() {
     const tipo = $("#contato-tipo").value, nome = $("#contato-nome").value.trim(), msg = $("#contato-mensagem").value.trim();
     const assunto = `[Árvore da API do GRP] ${tipo}`;
@@ -1284,12 +1285,12 @@
   }
   $("#abrir-contato").addEventListener("click", () => $("#contato").showModal());
   $("#contato-fechar").addEventListener("click", () => $("#contato").close());
-  $("#contato-copiar").addEventListener("click", () => { const t = textoContato(); copiar(`Para: ${EMAIL_CONTATO}\nAssunto: ${t.assunto}\n\n${t.corpo}`); });
+  $("#contato-copiar").addEventListener("click", () => { const t = textoContato(); copiar(`Para: ${EMAIL_CONTATO}\nCc: ${EMAIL_COPIA.join("; ")}\nAssunto: ${t.assunto}\n\n${t.corpo}`); });
   $("#contato-enviar").addEventListener("click", () => {
     const t = textoContato();
     if (!t.msg) { $("#contato-mensagem").focus(); return; }
     const link = $("#contato-link");
-    link.href = `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(t.assunto)}&body=${encodeURIComponent(t.corpo)}`;
+    link.href = `mailto:${EMAIL_CONTATO}?cc=${encodeURIComponent(EMAIL_COPIA.join(","))}&subject=${encodeURIComponent(t.assunto)}&body=${encodeURIComponent(t.corpo)}`;
     link.click();
     $("#contato").close();
   });
