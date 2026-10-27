@@ -1,0 +1,45 @@
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+<soap-env:Body>
+<grp:gerarSolicOrdemPagamentoBancaria>
+<solicitacaoOrdemPagamentoBancaria>
+<numeroRequisicao>1048558973</numeroRequisicao>
+<identificadorProcessoExecucao>PGBANESC1.1.1</identificadorProcessoExecucao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<numeroArquivo>1</numeroArquivo>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+<codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+<codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+<cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+<cpfOperador>00000000000</cpfOperador>
+<cpfCnpjCredor>55012456000163</cpfCnpjCredor>
+<classificacaoCredor>BENEFICIÁRIOS DIVERSOS</classificacaoCredor>
+<origemPagamento>OLP Diversos</origemPagamento>
+<cpfCnpjCredorOP>55012456000163</cpfCnpjCredorOP>
+<classificacaoCredorDaOP>BENEFICIÁRIOS DIVERSOS</classificacaoCredorDaOP>
+<tipoContaADebitar>1</tipoContaADebitar>
+<finalidadePagamento>Não se aplica</finalidadePagamento>
+<codigoFormaPagamento>001</codigoFormaPagamento>
+<tipoContaACreditar>1</tipoContaACreditar>
+<codigoBancoACreditar>001</codigoBancoACreditar>
+<codigoAgenciaACreditar>9012</codigoAgenciaACreditar>
+<dvAgenciaACreditar>6</dvAgenciaACreditar>
+<codigoContaACreditar>90006</codigoContaACreditar>
+<dvContaACreditar>3</dvContaACreditar>
+<valorTotalAPagarDaOP>10.00</valorTotalAPagarDaOP>
+<valorLiquidoPagamento>10.00</valorLiquidoPagamento>
+<dataProgramadaPagamento>2026-10-06T00:00:00</dataProgramadaPagamento>
+<justificativa>Teste Homologação GRP Via API - Cenários de homologação - 06102026</justificativa>
+<itemDePagamentoList>
+<ItemDePagamento>
+<itemDePagamento>1</itemDePagamento>
+<anoNumeroDaOlpEEmpenho>2026/42042</anoNumeroDaOlpEEmpenho>
+<valorAPagar>10.00</valorAPagar>
+<valorTotalAPagar>10.00</valorTotalAPagar>
+<valorLiquido>10.00</valorLiquido>
+</ItemDePagamento>
+</itemDePagamentoList>
+</solicitacaoOrdemPagamentoBancaria>
+</grp:gerarSolicOrdemPagamentoBancaria>
+</soap-env:Body>
+</soap-env:Envelope>

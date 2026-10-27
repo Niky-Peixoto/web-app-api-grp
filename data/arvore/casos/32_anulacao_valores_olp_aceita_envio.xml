@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:solicitarAnulacaoValoresNaOLP>
+      <solicitarAnulacaoValoresNaOLP>
+        <numeroRequisicao>1511184693</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP2.2</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroOlp>22606</numeroOlp>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+        <cpfOperador>00000000000</cpfOperador>
+        <valorLiquidoAnulado>500.00</valorLiquidoAnulado>
+        <valorTotalAnulado>500.00</valorTotalAnulado>
+        <justificativa>TESTE ANULACAO OLP 22606</justificativa>
+      </solicitarAnulacaoValoresNaOLP>
+    </grp:solicitarAnulacaoValoresNaOLP>
+  </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,16 @@
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+<soap-env:Body>
+<grp:cancelarOrdemPagamentoBancaria>
+<cancelamentoOrdemPagamentoBancaria>
+<numeroRequisicao>1345468423</numeroRequisicao>
+<exercicioFinanceiro>2026</exercicioFinanceiro>
+<identificadorProcessoExecucao>PGBANESC1.2.1</identificadorProcessoExecucao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<numeroDocumentoOrdemDePagamento>116826</numeroDocumentoOrdemDePagamento>
+<cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+<cpfOperador>00000000000</cpfOperador>
+<justificativa>CANCELAMENTO VIA API GRP - OP 116826</justificativa>
+</cancelamentoOrdemPagamentoBancaria>
+</grp:cancelarOrdemPagamentoBancaria>
+</soap-env:Body>
+</soap-env:Envelope>

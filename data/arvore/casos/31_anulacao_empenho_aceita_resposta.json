@@ -1,0 +1,11 @@
+{
+  "numeroRequisicao": "1510363400",
+  "codigoSistemaOrigem": "51",
+  "anoExercicioFinanceiro": "2026",
+  "numeroSolicitacao": "98",
+  "situacaoSolicitacao": "Encaminhada para análise",
+  "numeroDocumento": null,
+  "situacaoDocumento": null,
+  "dataSolicitacao": "2026-06-15T10:36:39.632-03:00",
+  "mensagens": [{"codigo": "41040", "descricao": "Solicitação de anulação de empenho gerado com sucesso!"}]
+}

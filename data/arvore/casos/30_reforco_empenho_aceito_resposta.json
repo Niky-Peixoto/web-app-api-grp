@@ -1,0 +1,9 @@
+{
+  "numeroRequisicao": "222",
+  "codigoSistemaOrigem": "51",
+  "anoExercicioFinanceiro": "2026",
+  "numeroSolicitacao": "27",
+  "situacaoSolicitacao": "Encaminhada para análise",
+  "dataSolicitacao": "2026-06-16T10:16:22.433-03:00",
+  "mensagens": [{"codigo": "41040", "descricao": "Solicitação Reforço de empenho da despesa gerado com sucesso!"}]
+}

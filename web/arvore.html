@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="build-time" content="{{BUILD_ISO}}">
+  <title>Árvore Interativa da API do GRP</title>
+  <script>try { var t = localStorage.getItem("arvore-grp-tema"); if (t === "claro" || t === "escuro") document.documentElement.dataset.tema = t; } catch (e) {}</script>
+  <link rel="icon" type="image/png" href="{{FAVICON}}">
+  <style>
+{{CSS}}
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-marca">
+      <div class="logos">
+        <img src="{{LOGO_GRP}}" alt="GRP Minas" class="logo-grp">
+        <img src="{{LOGO_TESOURO}}" alt="Tesouro Estadual" class="logo-tesouro">
+      </div>
+      <div class="topo-titulo">
+        <h1>Árvore Interativa da API do GRP</h1>
+        <p>Documentação de testes dos Web Services da API SOAP do GRP</p>
+      </div>
+    </div>
+    <div class="topo-acoes">
+      <span class="versao" title="Data da geração desta página">Versão {{VERSAO}} · {{BUILD}}</span>
+      <button type="button" class="botao" id="baixar-manual">⬇ Manual para LLMs</button>
+      <button type="button" class="botao" id="abrir-contato">💬 Dúvidas e sugestões</button>
+      <button type="button" class="botao" id="trocar-tema" title="Tema da página">🌓 Automático</button>
+    </div>
+  </header>
+
+  <nav class="abas" role="tablist">
+    <button type="button" role="tab" class="aba ativa" data-aba="inicio">🏠 Início</button>
+    <button type="button" role="tab" class="aba" data-aba="montar">🌳 Montar e testar</button>
+    <button type="button" role="tab" class="aba" data-aba="casos">📂 Casos reais</button>
+    <button type="button" role="tab" class="aba" data-aba="respostas">🔍 Entender uma resposta</button>
+    <button type="button" role="tab" class="aba" data-aba="contrato">📑 Contrato e dicionário</button>
+  </nav>
+
+  <main>
+    <!-- INÍCIO -->
+    <section class="painel ativo" id="painel-inicio">
+      <div class="boas-vindas">
+        <h2>Bem-vindo à documentação de testes da API do GRP</h2>
+        <p>Esta página reúne o que foi aprendido em testes reais dos Web Services do GRP-Minas: como montar cada chamada,
+          o que o GRP aceita, o que ele recusa e por quê. Tudo aqui vem de chamadas reais, com data.</p>
+        <p>Você não precisa instalar nada. Preencha os seus dados, gere o XML, envie e cole a resposta: a página explica o que aconteceu
+          e leva o número gerado para a próxima etapa.</p>
+        <button type="button" class="botao principal grande" data-ir-aba="montar">Começar a montar →</button>
+      </div>
+
+      <h2 class="titulo-secao">O que você encontra aqui</h2>
+      <div class="cartoes-inicio">
+        <button type="button" class="cartao-inicio" data-ir-aba="montar"><span class="icone">🌳</span><strong>Montar e testar</strong><span>Monte a cadeia etapa por etapa com os seus dados. A página confere as regras antes do envio e mostra como enviar.</span></button>
+        <button type="button" class="cartao-inicio" data-ir-aba="casos"><span class="icone">📂</span><strong>Casos reais</strong><span>Chamadas enviadas ao GRP e as respostas que voltaram — as aceitas e os erros — com o que cada uma ensina.</span></button>
+        <button type="button" class="cartao-inicio" data-ir-aba="respostas"><span class="icone">🔍</span><strong>Entender uma resposta</strong><span>Cole uma resposta do GRP e veja, em português, o que ela quer dizer e o que fazer.</span></button>
+        <button type="button" class="cartao-inicio" data-ir-aba="contrato"><span class="icone">📑</span><strong>Contrato e dicionário</strong><span>Os campos de cada serviço pelo contrato da produção, e o significado de cada tag.</span></button>
+      </div>
+
+      <h2 class="titulo-secao">O ciclo de execução da despesa</h2>
+      <p class="texto-secao">As quatro chamadas são encadeadas: cada etapa usa o número do documento gerado na etapa anterior.</p>
+      <div id="ciclo"></div>
+
+      <h2 class="titulo-secao">Operações de manutenção</h2>
+      <p class="texto-secao">Usadas sobre documentos que já existem, registrados pela API ou pela tela do GRP.</p>
+      <div id="manutencoes"></div>
+
+      <h2 class="titulo-secao">Como usar, em cinco passos</h2>
+      <ol class="passos-uso">
+        <li><strong>Informe os dados da execução</strong> uma vez: sistema, órgão, UO, UA, ordenador, operador e credor. Ficam só no seu navegador.</li>
+        <li><strong>Preencha a etapa</strong> e leia a conferência: em vermelho o que o GRP vai recusar, em amarelo o que vale conferir.</li>
+        <li><strong>Envie</strong> pelo botão da página (com o ajudante de envio) ou copie o comando pronto para PowerShell, curl, Python ou Postman.</li>
+        <li><strong>Cole a resposta</strong> do GRP. A página explica o resultado.</li>
+        <li><strong>Leve para a próxima etapa</strong> com um clique: o número do processo, do empenho ou da OLP é preenchido automaticamente.</li>
+      </ol>
+
+      <h2 class="titulo-secao">Antes do primeiro envio</h2>
+      <p class="texto-secao">O que precisa existir no GRP para a integração funcionar, e o impacto quando falta. Abra "Leia mais" para a explicação completa.</p>
+      <div id="requisitos"></div>
+
+    </section>
+
+    <!-- MONTAR -->
+    <section class="painel" id="painel-montar">
+      <div class="montador">
+        <aside class="arvore" id="arvore" aria-label="Etapas"></aside>
+        <div class="etapa" id="etapa"></div>
+      </div>
+    </section>
+
+    <!-- CASOS REAIS -->
+    <section class="painel" id="painel-casos">
+      <div class="cabecalho-painel">
+        <h2>Casos reais</h2>
+        <p>Chamadas enviadas ao GRP e as respostas que voltaram, com o que cada uma ensina. CPFs mascarados. A data mostra quando cada formato foi provado.</p>
+        <div class="filtros" id="filtros-casos"></div>
+      </div>
+      <div class="casos" id="lista-casos"></div>
+    </section>
+
+    <!-- RESPOSTAS E ERROS -->
+    <section class="painel" id="painel-respostas">
+      <div class="cabecalho-painel">
+        <h2>Entender uma resposta do GRP</h2>
+        <p>Cole qualquer resposta (XML, SOAP Fault ou página de erro). A explicação usa os mesmos critérios do Assistente GRP.</p>
+      </div>
+      <div class="cartao">
+        <textarea id="resposta-avulsa" class="codigo-entrada" rows="8" placeholder="Cole aqui a resposta do GRP"></textarea>
+        <div id="interpretacao-avulsa"></div>
+      </div>
+      <div class="cabecalho-painel">
+        <h2>Códigos já vistos</h2>
+        <input type="search" id="busca-codigos" class="busca" placeholder="Buscar por código ou palavra (ex.: 37144, saldo, instrumento)">
+      </div>
+      <div id="lista-codigos"></div>
+    </section>
+
+    <!-- CONTRATO E DICIONÁRIO -->
+    <section class="painel" id="painel-contrato">
+      <div class="cabecalho-painel">
+        <h2>Contrato de cada serviço</h2>
+        <p>O <strong>contrato</strong> (o arquivo WSDL do serviço) é a lista oficial dos campos que cada serviço do GRP aceita: o nome
+          de cada um, o tipo de valor e se é obrigatório. Se o XML trouxer um campo fora dessa lista, ou um número com texto dentro,
+          o GRP recusa antes de olhar qualquer regra (HTTP 500, "Unmarshalling Error").</p>
+        <p><strong>Campo ou tag?</strong> É a mesma coisa vista de dois lados: o <em>campo</em> é a informação (ex.: o valor a pagar);
+          a <em>tag</em> é como ela aparece escrita no XML, entre &lt; &gt; — <code>&lt;valorAPagar&gt;1260.00&lt;/valorAPagar&gt;</code>.
+          Os campos vêm em <em>grupos</em> (ex.: "cada item de pagamento"), que são tags que guardam outras tags.</p>
+        <p><strong>Obrigatório no contrato</strong> só quer dizer que a tag tem de existir. O GRP pode exigir outros campos conforme
+          o caso (ex.: a finalidade com conta específica). A aba Montar e testar confere essas exigências, e os casos reais mostram cada uma.</p>
+        <p id="origem-contrato"></p>
+        <div class="filtros" id="servicos-contrato"></div>
+      </div>
+      <div id="tabela-contrato"></div>
+      <div class="cabecalho-painel">
+        <h2>Dicionário de tags</h2>
+        <p>O significado de cada campo, o que o contrato atual diz dele (tipo e obrigatoriedade, por serviço) e como preenchê-lo, com o que já se confirmou em chamadas reais.</p>
+        <input type="search" id="busca-dicionario" class="busca" placeholder="Buscar campo, significado ou regra">
+      </div>
+      <div id="lista-dicionario"></div>
+    </section>
+  </main>
+
+  <dialog class="contato" id="contato">
+    <form method="dialog" id="form-contato">
+      <h2>Dúvidas e sugestões</h2>
+      <p>A mensagem vai para <strong>nicole.peixoto@fazenda.mg.gov.br</strong>. O botão abre o seu programa de e-mail com
+        o texto pronto; é só conferir e enviar. Não inclua senhas nem dados pessoais de credores.</p>
+      <label>Tipo
+        <select id="contato-tipo"><option>Dúvida</option><option>Sugestão</option><option>Problema na página</option></select></label>
+      <label>Seu nome e órgão (opcional)<input id="contato-nome" autocomplete="name"></label>
+      <label>Mensagem<textarea id="contato-mensagem" required placeholder="Ex.: em qual etapa, o que você tentou e o que aconteceu"></textarea></label>
+      <div class="acoes-linha">
+        <button type="button" class="botao" id="contato-copiar">📋 Copiar o texto</button>
+        <button type="button" class="botao" value="cancelar" id="contato-fechar">Fechar</button>
+        <button type="button" class="botao principal" id="contato-enviar">✉️ Abrir no meu e-mail</button>
+      </div>
+      <a id="contato-link" href="mailto:nicole.peixoto@fazenda.mg.gov.br" hidden>e-mail</a>
+    </form>
+  </dialog>
+
+  <footer class="rodape">
+    Subsecretaria do Tesouro Estadual · SEF-MG. As regras desta página vêm de chamadas reais. Os catálogos embutidos foram coletados nas datas indicadas e podem estar desatualizados: em caso de divergência, vale o cadastro do GRP, que pode ser consultado nas telas do sistema.
+  </footer>
+
+  <script id="dados" type="application/json">{{DADOS_JSON}}</script>
+  <script>
+{{GRP_XML_JS}}
+  </script>
+  <script>
+{{ARVORE_JS}}
+  </script>
+</body>
+</html>

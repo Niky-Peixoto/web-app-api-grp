@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:int="http://interfaces.webservices.institucional.business.grp.prodemge.gov.br/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <int:gerarNumeroProcessoGrp>
+      <anoExercicio>{{ ano_exercicio | default(2026) }}</anoExercicio>
+      <codigoOrgao>{{ orgao_executor | default(10190) }}</codigoOrgao>
+      <codigoProcessoDeNegocio>{{ codigo_processo | default(18) }}</codigoProcessoDeNegocio>
+      <codigoUnidadeAdministrativa>{{ ua | default(1019080124) }}</codigoUnidadeAdministrativa>
+      <codigoUnidadeOrcamentaria>{{ uo | default(10191) }}</codigoUnidadeOrcamentaria>
+      <codigoSistemaSolicitante>{{ codigo_sistema_solicitante | default(51) }}</codigoSistemaSolicitante>
+    </int:gerarNumeroProcessoGrp>
+  </soapenv:Body>
+</soapenv:Envelope>

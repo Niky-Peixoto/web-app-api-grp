@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://interfaces.webservices.institucional.business.grp.prodemge.gov.br/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <int:gerarNumeroProcessoGrp>
+      <anoExercicio>2026</anoExercicio>
+      <codigoOrgao>10190</codigoOrgao>
+      <codigoProcessoDeNegocio>18</codigoProcessoDeNegocio>
+      <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+      <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+      <codigoSistemaSolicitante>51</codigoSistemaSolicitante>
+    </int:gerarNumeroProcessoGrp>
+  </soapenv:Body>
+</soapenv:Envelope>

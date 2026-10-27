@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:gerarNumeroProcessoGrpResponse xmlns:ns2="http://interfaces.webservices.institucional.business.grp.prodemge.gov.br/">
+      <return>101901800000431202611</return>
+    </ns2:gerarNumeroProcessoGrpResponse>
+  </soap:Body>
+</soap:Envelope>

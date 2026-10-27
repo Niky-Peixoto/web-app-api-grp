@@ -1,0 +1,27 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:gerarSolicitacaoEmpenhoResponse xmlns:ns2="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/">
+<return>
+<numeroRequisicao>1050832350</numeroRequisicao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<situacaoSolicitacao>Não Gerada</situacaoSolicitacao>
+<dataSolicitacao>2026-10-05T11:45:01.744-03:00</dataSolicitacao>
+<mensagens>
+<mensagem>
+<codigo>25081</codigo>
+<descricao>O campo codigoUfg é obrigatório.</descricao>
+</mensagem>
+<mensagem>
+<codigo>25081</codigo>
+<descricao>O campo codigoProcedimentoContratacao é obrigatório.</descricao>
+</mensagem>
+<mensagem>
+<codigo>25081</codigo>
+<descricao>O campo nomeProcedimentoContratacao é obrigatório.</descricao>
+</mensagem>
+</mensagens>
+</return>
+</ns2:gerarSolicitacaoEmpenhoResponse>
+</soap:Body>
+</soap:Envelope>

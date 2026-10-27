@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:gerarSolicitacaoEmpenhoResponse xmlns:ns2="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/">
+<return>
+<numeroRequisicao>1331624400</numeroRequisicao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<situacaoSolicitacao>Não Gerada</situacaoSolicitacao>
+<dataSolicitacao>2026-10-05T12:36:52.035-03:00</dataSolicitacao>
+<mensagens>
+<mensagem>
+<codigo>0</codigo>
+<descricao>Sistema NOTA MINEIRA diferente do sistema do elemento-item PORTAL DE COMPRAS.</descricao>
+</mensagem>
+</mensagens>
+</return>
+</ns2:gerarSolicitacaoEmpenhoResponse>
+</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,46 @@
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+<soap-env:Body>
+<grp:gerarSolicOrdemPagamentoBancaria>
+<solicitacaoOrdemPagamentoBancaria>
+<numeroRequisicao>1401973365</numeroRequisicao>
+<identificadorProcessoExecucao>PGBANESC1.1.1</identificadorProcessoExecucao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<numeroArquivo>1</numeroArquivo>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+<codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+<codigoUnidadeAdministrativa>1019080010</codigoUnidadeAdministrativa>
+<cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+<cpfOperador>00000000000</cpfOperador>
+<cpfCnpjCredor>02038232000164</cpfCnpjCredor>
+<classificacaoCredor>INSTITUIÇÃO FINANCEIRA</classificacaoCredor>
+<origemPagamento>OLP Diversos</origemPagamento>
+<cpfCnpjCredorOP>02038232000164</cpfCnpjCredorOP>
+<classificacaoCredorDaOP>INSTITUIÇÃO FINANCEIRA</classificacaoCredorDaOP>
+<tipoContaADebitar>1</tipoContaADebitar>
+<finalidadePagamento>Não se aplica</finalidadePagamento>
+<codigoFormaPagamento>002</codigoFormaPagamento>
+<tipoContaACreditar>1</tipoContaACreditar>
+<codigoBarras>00190000090000000000000000000018816100000000100</codigoBarras>
+<codigoBancoACreditar/>
+<codigoAgenciaACreditar/>
+<dvAgenciaACreditar/>
+<codigoContaACreditar/>
+<dvContaACreditar/>
+<valorTotalAPagarDaOP>1.00</valorTotalAPagarDaOP>
+<valorLiquidoPagamento>1.00</valorLiquidoPagamento>
+<dataProgramadaPagamento>2026-10-15T00:00:00</dataProgramadaPagamento>
+<justificativa>TESTE CODIGO DE BARRAS EM OLP DE CONTA - PARCELA 2722 DA OLP 57490</justificativa>
+<itemDePagamentoList>
+<ItemDePagamento>
+<itemDePagamento>1</itemDePagamento>
+<anoNumeroDaOlpEEmpenho>2026/57490</anoNumeroDaOlpEEmpenho>
+<valorAPagar>1.00</valorAPagar>
+<valorTotalAPagar>1.00</valorTotalAPagar>
+<valorLiquido>1.00</valorLiquido>
+</ItemDePagamento>
+</itemDePagamentoList>
+</solicitacaoOrdemPagamentoBancaria>
+</grp:gerarSolicOrdemPagamentoBancaria>
+</soap-env:Body>
+</soap-env:Envelope>

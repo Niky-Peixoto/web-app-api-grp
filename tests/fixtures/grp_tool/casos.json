@@ -1,0 +1,409 @@
+[
+ {
+  "nome": "01_processo",
+  "funcao": "xmlProcesso",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272"
+  }
+ },
+ {
+  "nome": "02_empenho_simples",
+  "funcao": "xmlEmpenho",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910001",
+   "justificativa": "EMPENHO DE TESTE",
+   "tipoEmpenho": "ORDINARIO",
+   "numeroProcesso": "101901800000431202611",
+   "credor": "12345678000190",
+   "classificacaoCredor": "FORNECEDOR",
+   "dotacao": {
+    "funcao": "04",
+    "subfuncao": "129",
+    "programa": "045",
+    "projetoAtividade": "4081",
+    "subprojeto": "0001",
+    "categoria": "3",
+    "grupo": "3",
+    "modalidade": "90",
+    "elemento": "031",
+    "item": "005",
+    "iag": "00",
+    "grupoFonte": "11",
+    "fonte": "500010",
+    "ipu": "01"
+   },
+   "valor": "1500.00",
+   "centroCusto": "0243",
+   "adicionais": {}
+  }
+ },
+ {
+  "nome": "03_empenho_adicionais",
+  "funcao": "xmlEmpenho",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910001",
+   "justificativa": "AQUISICAO <URGENTE> & ESTIMATIVA",
+   "tipoEmpenho": "ESTIMATIVO",
+   "numeroProcesso": "101901800000431202611",
+   "credor": "12345678000190",
+   "classificacaoCredor": "FORNECEDOR",
+   "dotacao": {
+    "funcao": "04",
+    "subfuncao": "129",
+    "programa": "045",
+    "projetoAtividade": "4081",
+    "subprojeto": "0001",
+    "categoria": "3",
+    "grupo": "3",
+    "modalidade": "90",
+    "elemento": "031",
+    "item": "005",
+    "iag": "00",
+    "grupoFonte": "11",
+    "fonte": "500010",
+    "ipu": "01"
+   },
+   "valor": "1500.00",
+   "centroCusto": "0243",
+   "adicionais": {
+    "codigoUfg": "20121",
+    "numeroProcessoCompra": "12553020001692023",
+    "codigoProcedimentoContratacao": "133",
+    "nomeProcedimentoContratacao": "Bens & serviços",
+    "numeroEspecificacaoEmpenho": "6532387"
+   }
+  }
+ },
+ {
+  "nome": "04_olp_sem_retencao",
+  "funcao": "xmlOlp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910002",
+   "mesCompetencia": "10",
+   "anoCompetencia": "2026",
+   "justificativa": "LIQUIDACAO DE TESTE",
+   "empenho": "57511",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "bruto": 100,
+   "liquido": 100,
+   "retencoes": []
+  }
+ },
+ {
+  "nome": "05_olp_inss_issqn_cpf",
+  "funcao": "xmlOlp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910002",
+   "mesCompetencia": "10",
+   "anoCompetencia": "2026",
+   "justificativa": "LIQUIDACAO DE TESTE",
+   "empenho": "57511",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "bruto": 100,
+   "liquido": 84,
+   "retencoes": [
+    {
+     "tipo": "4",
+     "valor": 11,
+     "credor": "29979036000140"
+    },
+    {
+     "tipo": "13",
+     "valor": 5,
+     "credor": "18715383000140"
+    }
+   ]
+  }
+ },
+ {
+  "nome": "06_olp_inss_cnpj",
+  "funcao": "xmlOlp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910002",
+   "mesCompetencia": "10",
+   "anoCompetencia": "2026",
+   "justificativa": "LIQUIDACAO DE TESTE",
+   "empenho": "57511",
+   "credor": "12345678000190",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "bruto": 10000,
+   "liquido": 8900,
+   "retencoes": [
+    {
+     "tipo": "14",
+     "valor": 1100,
+     "credor": "29979036000140"
+    }
+   ]
+  }
+ },
+ {
+  "nome": "07_op_conta_unica",
+  "funcao": "xmlOp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910003",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "debitar": {
+    "tipo": "1"
+   },
+   "creditar": {
+    "tipo": "1",
+    "banco": "001",
+    "agencia": "9012",
+    "dvAgencia": "6",
+    "conta": "90006",
+    "dvConta": "3"
+   },
+   "forma": "001",
+   "codigoBarras": "",
+   "finalidade": "",
+   "aPagar": 84,
+   "irrf": 0,
+   "dataProgramada": "2026-10-26T00:00:00",
+   "justificativa": "PAGAMENTO DE TESTE - PARCELA 1",
+   "olp": "2026/57837"
+  }
+ },
+ {
+  "nome": "08_op_conta_especifica",
+  "funcao": "xmlOp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910003",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "debitar": {
+    "tipo": "2",
+    "banco": "001",
+    "agencia": "1615",
+    "dvAgencia": "2",
+    "conta": "22768",
+    "dvConta": "4"
+   },
+   "creditar": {
+    "tipo": "1",
+    "banco": "001",
+    "agencia": "9012",
+    "dvAgencia": "6",
+    "conta": "90006",
+    "dvConta": "3"
+   },
+   "forma": "001",
+   "codigoBarras": "",
+   "finalidade": "Não se aplica",
+   "aPagar": 137,
+   "irrf": 0,
+   "dataProgramada": "2026-10-26T00:00:00",
+   "justificativa": "PAGAMENTO DE TESTE - PARCELA 1",
+   "olp": "2026/57837"
+  }
+ },
+ {
+  "nome": "09_op_codigo_barras",
+  "funcao": "xmlOp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910003",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "debitar": {
+    "tipo": "1"
+   },
+   "creditar": {
+    "tipo": "1"
+   },
+   "forma": "002",
+   "codigoBarras": "00190000090000000000000000000018816100000000100",
+   "finalidade": "Não se aplica",
+   "aPagar": 100,
+   "irrf": 0,
+   "dataProgramada": "2026-10-26T00:00:00",
+   "justificativa": "PAGAMENTO DE TESTE - PARCELA 1",
+   "olp": "2026/57837"
+  }
+ },
+ {
+  "nome": "10_op_irrf",
+  "funcao": "xmlOp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910003",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "debitar": {
+    "tipo": "1"
+   },
+   "creditar": {
+    "tipo": "1",
+    "banco": "756",
+    "agencia": "1",
+    "dvAgencia": "",
+    "conta": "90023",
+    "dvConta": "3"
+   },
+   "forma": "001",
+   "codigoBarras": "",
+   "finalidade": "Não se aplica",
+   "aPagar": 200,
+   "irrf": 100,
+   "dataProgramada": "2026-10-26T00:00:00",
+   "justificativa": "PAGAMENTO DE TESTE - PARCELA 1",
+   "olp": "2026/57837"
+  }
+ },
+ {
+  "nome": "11_op_poupanca_sem_dv",
+  "funcao": "xmlOp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910003",
+   "credor": "00000000353",
+   "classificacaoCredor": "BENEFICIÁRIOS DIVERSOS",
+   "debitar": {
+    "tipo": "1"
+   },
+   "creditar": {
+    "tipo": "2",
+    "banco": "104",
+    "agencia": "9014",
+    "dvAgencia": "0",
+    "conta": "907",
+    "dvConta": ""
+   },
+   "forma": "001",
+   "codigoBarras": "",
+   "finalidade": "",
+   "aPagar": 500,
+   "irrf": 0,
+   "dataProgramada": "2026-10-26T00:00:00",
+   "justificativa": "PAGAMENTO DE TESTE - PARCELA 1",
+   "olp": "2026/57837"
+  }
+ },
+ {
+  "nome": "12_cancelamento",
+  "funcao": "xmlCancelamento",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910004",
+   "documentoOp": "116865",
+   "justificativa": "CANCELAMENTO VIA API GRP - OP 116865"
+  }
+ },
+ {
+  "nome": "13_anulacao_olp",
+  "funcao": "xmlAnulacaoOlp",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910005",
+   "numeroOlp": "22606",
+   "liquido": 50000,
+   "total": 50000,
+   "justificativa": "ANULACAO VIA API GRP - OLP 22606"
+  }
+ },
+ {
+  "nome": "14_anulacao_empenho",
+  "funcao": "xmlAnulacaoEmpenho",
+  "dados": {
+   "ano": "2026",
+   "orgao": "10190",
+   "uo": "10191",
+   "ua": "1019080124",
+   "sistema": "51",
+   "cpfOrdenador": "00000000191",
+   "cpfOperador": "00000000272",
+   "numeroRequisicao": "2026101910006",
+   "empenho": "22575",
+   "valor": 50000,
+   "justificativa": "ANULACAO VIA API GRP - EMPENHO 22575"
+  }
+ }
+]

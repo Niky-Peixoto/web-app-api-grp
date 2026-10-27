@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicitacaoEmpenho>
+      <solicitacaoEmpenho>
+        <numeroRequisicao>2026101910001</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP1.1</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000191</cpfOrdenadorDespesa>
+        <justificativa>AQUISICAO &lt;URGENTE&gt; &amp; ESTIMATIVA</justificativa>
+        <tipoEmpenhoComum>ESTIMATIVO</tipoEmpenhoComum>
+        <olpPendenteCreditoNaoRegularizar>
+          <indicadorReconhecimentoPassivo>NAO</indicadorReconhecimentoPassivo>
+          <cpfOperador>00000000272</cpfOperador>
+          <numeroProcessoGeral>101901800000431202611</numeroProcessoGeral>
+          <cpfCnpjCredor>12345678000190</cpfCnpjCredor>
+          <classificacaoCredor>FORNECEDOR</classificacaoCredor>
+          <codigoFuncao>04</codigoFuncao>
+          <codigoSubfuncao>129</codigoSubfuncao>
+          <codigoPrograma>045</codigoPrograma>
+          <codigoProjetoAtividade>4081</codigoProjetoAtividade>
+          <codigoSubprojetoSubatividade>0001</codigoSubprojetoSubatividade>
+          <codigoCategoriaEconomica>3</codigoCategoriaEconomica>
+          <codigoGrupoDespesa>3</codigoGrupoDespesa>
+          <codigoModalidadeDespesa>90</codigoModalidadeDespesa>
+          <codigoElementoDespesa>031</codigoElementoDespesa>
+          <codigoItem>005</codigoItem>
+          <codigoIag>00</codigoIag>
+          <codigoGrupoFonte>11</codigoGrupoFonte>
+          <codigoFonteRecurso>500010</codigoFonteRecurso>
+          <codigoIpu>01</codigoIpu>
+          <valorEmpenho>1500.00</valorEmpenho>
+          <codigoCc>0243</codigoCc>
+          <codigoUfg>20121</codigoUfg>
+          <numeroProcessoCompra>12553020001692023</numeroProcessoCompra>
+          <codigoProcedimentoContratacao>133</codigoProcedimentoContratacao>
+          <nomeProcedimentoContratacao>Bens &amp; serviços</nomeProcedimentoContratacao>
+          <numeroEspecificacaoEmpenho>6532387</numeroEspecificacaoEmpenho>
+        </olpPendenteCreditoNaoRegularizar>
+      </solicitacaoEmpenho>
+    </grp:gerarSolicitacaoEmpenho>
+  </soap-env:Body>
+</soap-env:Envelope>

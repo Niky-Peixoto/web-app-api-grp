@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:solicitarOLP>
+      <solicitacaoOlp>
+        <numeroRequisicao>2026101910002</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP2.1</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000191</cpfOrdenadorDespesa>
+        <cpfOperador>00000000272</cpfOperador>
+        <mesCompetenciaDespesa>10</mesCompetenciaDespesa>
+        <anoCompetenciaDespesa>2026</anoCompetenciaDespesa>
+        <justificativa>LIQUIDACAO DE TESTE</justificativa>
+        <OlpDeEmpenho>
+          <numeroDocumentoEmpenho>57511</numeroDocumentoEmpenho>
+          <cpfCredorBeneficiario>00000000353</cpfCredorBeneficiario>
+          <tipoClassificacaoCredor>BENEFICIÁRIOS DIVERSOS</tipoClassificacaoCredor>
+        </OlpDeEmpenho>
+        <ValoresDaOlp>
+          <valorBrutoOlp>1.00</valorBrutoOlp>
+          <valorLiquido>1.00</valorLiquido>
+        </ValoresDaOlp>
+      </solicitacaoOlp>
+    </grp:solicitarOLP>
+  </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicOrdemPagamentoBancaria>
+      <solicitacaoOrdemPagamentoBancaria>
+        <numeroRequisicao>1786386227</numeroRequisicao>
+        <identificadorProcessoExecucao>PGBANESC1.1.1</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <numeroArquivo>1</numeroArquivo>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>20121</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>20120</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>2012080010</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+        <cpfOperador>00000000000</cpfOperador>
+        <cpfCnpjCredor>00000000000</cpfCnpjCredor>
+        <classificacaoCredor>FORNECEDOR</classificacaoCredor>
+        <origemPagamento>OLP Diversos</origemPagamento>
+        <cpfCnpjCredorOP>00000000000</cpfCnpjCredorOP>
+        <classificacaoCredorDaOP>FORNECEDOR</classificacaoCredorDaOP>
+        <tipoContaADebitar>2</tipoContaADebitar>
+        <codigoBancoADebitar>001</codigoBancoADebitar>
+        <codigoAgenciaADebitar>1615</codigoAgenciaADebitar>
+        <dvAgenciaADebitar>2</dvAgenciaADebitar>
+        <codigoContaADebitar>22768</codigoContaADebitar>
+        <dvContaADebitar>4</dvContaADebitar>
+        <codigoFormaPagamento>001</codigoFormaPagamento>
+        <tipoContaACreditar>1</tipoContaACreditar>
+        <codigoBancoACreditar>001</codigoBancoACreditar>
+        <codigoAgenciaACreditar>9000</codigoAgenciaACreditar>
+        <codigoContaACreditar>90011</codigoContaACreditar>
+        <dvContaACreditar>2</dvContaACreditar>
+        <valorTotalAPagarDaOP>1.37</valorTotalAPagarDaOP>
+        <valorLiquidoPagamento>1.37</valorLiquidoPagamento>
+        <dataProgramadaPagamento>2026-08-10T00:00:00</dataProgramadaPagamento>
+        <justificativa>pagamento individualizado do prestador de saúde 00000000000 - Tipo contrato 27</justificativa>
+        <finalidadePagamento>01</finalidadePagamento>
+        <itemDePagamentoList>
+          <ItemDePagamento>
+            <itemDePagamento>1</itemDePagamento>
+            <anoNumeroDaOlpEEmpenho>2026/41991</anoNumeroDaOlpEEmpenho>
+            <valorAPagar>1.37</valorAPagar>
+            <valorTotalAPagar>1.37</valorTotalAPagar>
+            <valorLiquido>1.37</valorLiquido>
+          </ItemDePagamento>
+        </itemDePagamentoList>
+      </solicitacaoOrdemPagamentoBancaria>
+    </grp:gerarSolicOrdemPagamentoBancaria>
+  </soap-env:Body>
+</soap-env:Envelope>

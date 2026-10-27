@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:gerarSolicOrdemPagamentoBancariaResponse xmlns:ns2="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/">
+      <return>
+        <numeroRequisicao>1786386251</numeroRequisicao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroSolicitacao>69705</numeroSolicitacao>
+        <situacaoSolicitacao>Concluída</situacaoSolicitacao>
+        <numeroDocumento>64611</numeroDocumento>
+        <situacaoDocumento>REGISTRADO_PENDENTE_ASSINATURA</situacaoDocumento>
+        <urlDocumento>https://www.grp.servicos.mg.gov.br/grp-srv-rs/rest/serviceBus/documento/00000000000/f981e295-b7c2-45bc-a720-cbce090b5b2f</urlDocumento>
+        <dataSolicitacao>2026-08-10T15:27:29.099-03:00</dataSolicitacao>
+        <mensagens>
+          <mensagem>
+            <codigo>51424</codigo>
+            <descricao>Solicitação de ordem de pagamento Bancária gerada com sucesso!</descricao>
+          </mensagem>
+        </mensagens>
+      </return>
+    </ns2:gerarSolicOrdemPagamentoBancariaResponse>
+  </soap:Body>
+</soap:Envelope>

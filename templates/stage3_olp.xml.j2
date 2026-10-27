@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:solicitarOLP>
+      <solicitacaoOlp>
+        <numeroRequisicao>{{ num_requisicao }}</numeroRequisicao>
+        <identificadorProcessoExecucao>{{ identificador_processo_olp | default('EMPOLP2.1') }}</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>{{ codigo_sistema_origem | default(51) }}</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>{{ ano_exercicio | default(2026) }}</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>{{ uo | default(10191) }}</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>{{ orgao_executor | default(10190) }}</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>{{ ua | default(1019080124) }}</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>{{ cpf_ordenador | default('00000000191') }}</cpfOrdenadorDespesa>
+        <cpfOperador>{{ cpf_operador | default('00000000191') }}</cpfOperador>
+        <mesCompetenciaDespesa>{{ mes_competencia | default(8) }}</mesCompetenciaDespesa>
+        <anoCompetenciaDespesa>{{ ano_exercicio | default(2026) }}</anoCompetenciaDespesa>
+        <justificativa>{{ justificativa }}</justificativa>
+        <OlpDeEmpenho>
+          <numeroDocumentoEmpenho>{{ numero_empenho }}</numeroDocumentoEmpenho>
+          <cpfCredorBeneficiario>{{ credor_cpf_cnpj }}</cpfCredorBeneficiario>
+          <tipoClassificacaoCredor>{{ credor_classificacao }}</tipoClassificacaoCredor>
+        </OlpDeEmpenho>
+        <ValoresDaOlp>
+          <valorBrutoOlp>{{ valor }}</valorBrutoOlp>
+          <valorLiquido>{{ valor_liquido | default(valor) }}</valorLiquido>
+          {%- if ha_retencao and valor_retido and valor_retido != '0.00' %}
+          <valorRetencaoOlp>{{ valor_retido }}</valorRetencaoOlp>
+          {%- endif %}
+        </ValoresDaOlp>
+        {%- if ha_retencao and retencoes_list %}
+        <retencaoOlpRequestList>
+          {%- for ret in retencoes_list %}
+          <RetencaoOlp>
+            <tipoRetencao>{{ ret.codigo_tipo_retencao }}</tipoRetencao>
+            <valorRetencao>{{ ret.valor_retencao }}</valorRetencao>
+            <cpfCapfCredorRetencao>{{ ret.credor_retencao | default(credor_cpf_cnpj) }}</cpfCapfCredorRetencao>
+            <mesCompetenciaRetencao>{{ ret.mes_competencia | default(mes_competencia) | default(8) }}</mesCompetenciaRetencao>
+            <anoCompetenciaRetencao>{{ ret.ano_competencia | default(ano_exercicio) | default(2026) }}</anoCompetenciaRetencao>
+          </RetencaoOlp>
+          {%- endfor %}
+        </retencaoOlpRequestList>
+        {%- endif %}
+        {%- if exige_regionalizacao %}
+        <regionalizacaoDespesaOlpRequestList>
+          <RegionalizacaoDespesa>
+            <codigoMunicipio>{{ codigo_municipio | default(3106200) }}</codigoMunicipio>
+            <valorDistribuicao>{{ valor }}</valorDistribuicao>
+          </RegionalizacaoDespesa>
+        </regionalizacaoDespesaOlpRequestList>
+        {%- endif %}
+      </solicitacaoOlp>
+    </grp:solicitarOLP>
+  </soap-env:Body>
+</soap-env:Envelope>

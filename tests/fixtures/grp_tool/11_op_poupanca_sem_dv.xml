@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicOrdemPagamentoBancaria>
+      <solicitacaoOrdemPagamentoBancaria>
+        <numeroRequisicao>2026101910003</numeroRequisicao>
+        <identificadorProcessoExecucao>PGBANESC1.1.1</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <numeroArquivo>1</numeroArquivo>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000191</cpfOrdenadorDespesa>
+        <cpfOperador>00000000272</cpfOperador>
+        <cpfCnpjCredor>00000000353</cpfCnpjCredor>
+        <classificacaoCredor>BENEFICIÁRIOS DIVERSOS</classificacaoCredor>
+        <origemPagamento>OLP Diversos</origemPagamento>
+        <cpfCnpjCredorOP>00000000353</cpfCnpjCredorOP>
+        <classificacaoCredorDaOP>BENEFICIÁRIOS DIVERSOS</classificacaoCredorDaOP>
+        <tipoContaADebitar>1</tipoContaADebitar>
+        <codigoFormaPagamento>001</codigoFormaPagamento>
+        <tipoContaACreditar>2</tipoContaACreditar>
+        <codigoBancoACreditar>104</codigoBancoACreditar>
+        <codigoAgenciaACreditar>9014</codigoAgenciaACreditar>
+        <dvAgenciaACreditar>0</dvAgenciaACreditar>
+        <codigoContaACreditar>907</codigoContaACreditar>
+        <dvContaACreditar>0</dvContaACreditar>
+        <valorTotalAPagarDaOP>5.00</valorTotalAPagarDaOP>
+        <valorLiquidoPagamento>5.00</valorLiquidoPagamento>
+        <dataProgramadaPagamento>2026-10-26T00:00:00</dataProgramadaPagamento>
+        <justificativa>PAGAMENTO DE TESTE - PARCELA 1</justificativa>
+        <itemDePagamentoList>
+          <ItemDePagamento>
+            <itemDePagamento>1</itemDePagamento>
+            <anoNumeroDaOlpEEmpenho>2026/57837</anoNumeroDaOlpEEmpenho>
+            <valorAPagar>5.00</valorAPagar>
+            <valorTotalAPagar>5.00</valorTotalAPagar>
+            <valorLiquido>5.00</valorLiquido>
+          </ItemDePagamento>
+        </itemDePagamentoList>
+      </solicitacaoOrdemPagamentoBancaria>
+    </grp:gerarSolicOrdemPagamentoBancaria>
+  </soap-env:Body>
+</soap-env:Envelope>

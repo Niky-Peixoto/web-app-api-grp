@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:solicitarOLPResponse xmlns:ns2="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/">
+      <return>
+        <numeroRequisicao>1790189806</numeroRequisicao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroSolicitacaoOlp>57926</numeroSolicitacaoOlp>
+        <situacaoSolicitacao>Concluída</situacaoSolicitacao>
+        <numeroDocumento>57837</numeroDocumento>
+        <situacaoDocumento>Registrado e pendente de assinatura</situacaoDocumento>
+        <urlDocumento>https://www.grp.servicos.mg.gov.br/grp-srv-rs/rest/serviceBus/documento/00000000000/e6219aed-da55-4a00-a79d-ccab86c5fd73</urlDocumento>
+        <dataSolicitacao>2026-09-23T15:56:46.767-03:00</dataSolicitacao>
+        <retencaoResponseList>
+          <Retencao>
+            <tipoRetencao>14</tipoRetencao>
+            <credorRetencao>29979036000140</credorRetencao>
+            <valorRetencao>0.11</valorRetencao>
+          </Retencao>
+          <Retencao>
+            <tipoRetencao>13</tipoRetencao>
+            <credorRetencao>18715383000140</credorRetencao>
+            <valorRetencao>0.05</valorRetencao>
+          </Retencao>
+        </retencaoResponseList>
+        <mensagemResponseList>
+          <Mensagem>
+            <codigo>41040</codigo>
+            <descricao>Solicitação 57926 gerado com sucesso!</descricao>
+          </Mensagem>
+        </mensagemResponseList>
+      </return>
+    </ns2:solicitarOLPResponse>
+  </soap:Body>
+</soap:Envelope>

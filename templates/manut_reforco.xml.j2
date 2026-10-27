@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/">
+  <soap:Header/>
+  <soap:Body>
+    <grp:gerarSolicitacaoReforcoEmpenho>
+      <solicitacaoReforcoEmpenho>
+        <numeroRequisicao>{{ num_requisicao }}</numeroRequisicao>
+        <identificadorProcessoExecucao>{{ identificador_processo | default('EMPOLP1.2') }}</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>{{ codigo_sistema_origem | default(51) }}</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>{{ ano_exercicio | default(2026) }}</anoExercicioFinanceiro>
+        <numeroEmpenho>{{ numero_empenho | default('49746') }}</numeroEmpenho>
+        <codigoUnidadeOrcamentaria>{{ uo | default(10191) }}</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>{{ orgao_executor | default(10190) }}</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>{{ ua | default(1019080124) }}</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>{{ cpf_ordenador | default('00000000191') }}</cpfOrdenadorDespesa>
+        <cpfOperador>{{ cpf_operador | default('00000000191') }}</cpfOperador>
+        <valorReforco>{{ valor_reforco | default('50.00') }}</valorReforco>
+        <justificativa>{{ justificativa | default('Reforco de saldo para atender incremento de demanda do contrato SEF') }}</justificativa>
+      </solicitacaoReforcoEmpenho>
+    </grp:gerarSolicitacaoReforcoEmpenho>
+  </soap:Body>
+</soap:Envelope>

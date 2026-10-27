@@ -1,0 +1,52 @@
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+<soap-env:Body>
+<grp:gerarSolicOrdemPagamentoBancaria>
+<solicitacaoOrdemPagamentoBancaria>
+<numeroRequisicao>1362571388</numeroRequisicao>
+<identificadorProcessoExecucao>PGBANESC1.1.1</identificadorProcessoExecucao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<numeroArquivo>1</numeroArquivo>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<codigoUnidadeOrcamentaria>10251</codigoUnidadeOrcamentaria>
+<codigoOrgaoExecutor>10250</codigoOrgaoExecutor>
+<codigoUnidadeAdministrativa>1025080014</codigoUnidadeAdministrativa>
+<cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+<cpfOperador>00000000000</cpfOperador>
+<cpfCnpjCredor>69207850000161</cpfCnpjCredor>
+<classificacaoCredor>FORNECEDOR</classificacaoCredor>
+<origemPagamento>OLP Diversos</origemPagamento>
+<cpfCnpjCredorOP>69207850000161</cpfCnpjCredorOP>
+<classificacaoCredorDaOP>FORNECEDOR</classificacaoCredorDaOP>
+<tipoContaADebitar>2</tipoContaADebitar>
+<codigoBancoADebitar>001</codigoBancoADebitar>
+<codigoAgenciaADebitar>1615</codigoAgenciaADebitar>
+<dvAgenciaADebitar>2</dvAgenciaADebitar>
+<codigoContaADebitar>110505</codigoContaADebitar>
+<dvContaADebitar>1</dvContaADebitar>
+<instrumentoJuridico>SIM</instrumentoJuridico>
+<finalidadePagamento>Não se aplica</finalidadePagamento>
+<numeroInstrumentoJuridicoEntrada>2023940160</numeroInstrumentoJuridicoEntrada>
+<codigoFormaPagamento>001</codigoFormaPagamento>
+<tipoContaACreditar>1</tipoContaACreditar>
+<codigoBancoACreditar>756</codigoBancoACreditar>
+<codigoAgenciaACreditar>1</codigoAgenciaACreditar>
+<dvAgenciaACreditar/>
+<codigoContaACreditar>90023</codigoContaACreditar>
+<dvContaACreditar>3</dvContaACreditar>
+<valorTotalAPagarDaOP>1.00</valorTotalAPagarDaOP>
+<valorLiquidoPagamento>1.00</valorLiquidoPagamento>
+<dataProgramadaPagamento>2026-10-15T00:00:00</dataProgramadaPagamento>
+<justificativa>TESTE INSTRUMENTO JURIDICO VIA API GRP - OLP 97845</justificativa>
+<itemDePagamentoList>
+<ItemDePagamento>
+<itemDePagamento>1</itemDePagamento>
+<anoNumeroDaOlpEEmpenho>2025/97845</anoNumeroDaOlpEEmpenho>
+<valorAPagar>1.00</valorAPagar>
+<valorTotalAPagar>1.00</valorTotalAPagar>
+<valorLiquido>1.00</valorLiquido>
+</ItemDePagamento>
+</itemDePagamentoList>
+</solicitacaoOrdemPagamentoBancaria>
+</grp:gerarSolicOrdemPagamentoBancaria>
+</soap-env:Body>
+</soap-env:Envelope>

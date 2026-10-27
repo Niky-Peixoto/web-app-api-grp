@@ -1,0 +1,21 @@
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicitacaoReforcoEmpenho>
+      <solicitacaoReforcoEmpenho>
+        <numeroRequisicao>222</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP1.2</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroEmpenho>22575</numeroEmpenho>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+        <cpfOperador>00000000000</cpfOperador>
+        <valorReforco>1000.00</valorReforco>
+        <justificativa>TESTE REFORCO DE EMPENHO 22575</justificativa>
+      </solicitacaoReforcoEmpenho>
+    </grp:gerarSolicitacaoReforcoEmpenho>
+  </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:gerarSolicitacaoEmpenhoResponse xmlns:ns2="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/">
+      <return>
+        <numeroRequisicao>1790189797</numeroRequisicao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroSolicitacao>58086</numeroSolicitacao>
+        <situacaoSolicitacao>Concluída</situacaoSolicitacao>
+        <numeroDocumento>57511</numeroDocumento>
+        <situacaoDocumento>Registrado e pendente de assinatura</situacaoDocumento>
+        <urlDocumento>https://www.grp.servicos.mg.gov.br/grp-srv-rs/rest/serviceBus/documento/00000000000/ee1413f3-474b-48a7-b16c-abee8e11ec9a</urlDocumento>
+        <dataSolicitacao>2026-09-23T15:56:43.595-03:00</dataSolicitacao>
+        <mensagens>
+          <mensagem>
+            <codigo>41040</codigo>
+            <descricao>Solicitação Empenho gerado com sucesso!</descricao>
+          </mensagem>
+        </mensagens>
+      </return>
+    </ns2:gerarSolicitacaoEmpenhoResponse>
+  </soap:Body>
+</soap:Envelope>

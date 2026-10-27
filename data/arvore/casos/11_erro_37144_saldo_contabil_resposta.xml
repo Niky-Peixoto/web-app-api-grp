@@ -1,0 +1,14 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:gerarSolicOrdemPagamentoBancariaResponse xmlns:ns2="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/">
+<return>
+<mensagens>
+<mensagem>
+<codigo>37144</codigo>
+<descricao>Solicitação não registrada. Erro ao salvar solicitação de ordem de pagamento.. Causa: Ocorreu um erro ao contabilizar bloqueio de saldo. Causa: O saldo atual da Conta contábil 8221301010000000000000000 é insuficiente para o lançamento de ,85, UO: 10251, UA: 1025080035, Nível auxiliar: 154, Conta Auxiliar: 12025102513001150001001, Saldo Atual: 0.00. Identificador de processo contábil: SOPOLPPFBGSDBGSUFG, Tipo documento: 502, Número documento: 129280</descricao>
+</mensagem>
+</mensagens>
+</return>
+</ns2:gerarSolicOrdemPagamentoBancariaResponse>
+</soap:Body>
+</soap:Envelope>

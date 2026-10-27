@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicitacaoEmpenho>
+      <solicitacaoEmpenho>
+        <numeroRequisicao>{{ num_requisicao }}</numeroRequisicao>
+        <identificadorProcessoExecucao>{{ identificador_processo | default('EMPOLP1.1') }}</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>{{ codigo_sistema_origem | default(51) }}</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>{{ ano_exercicio | default(2026) }}</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>{{ uo | default(10191) }}</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>{{ orgao_executor | default(10190) }}</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>{{ ua | default(1019080124) }}</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>{{ cpf_ordenador | default('00000000191') }}</cpfOrdenadorDespesa>
+        <justificativa>{{ justificativa }}</justificativa>
+        <tipoEmpenhoComum>{{ tipo_empenho | default('ORDINARIO') }}</tipoEmpenhoComum>
+        <olpPendenteCreditoNaoRegularizar>
+          {%- if codigo_procedimento_contratacao %}
+          <codigoProcedimentoContratacao>{{ codigo_procedimento_contratacao }}</codigoProcedimentoContratacao>
+          <nomeProcedimentoContratacao>{{ nome_procedimento_contratacao | default('DISPENSA DE LICITACAO') }}</nomeProcedimentoContratacao>
+          {%- endif %}
+          <indicadorReconhecimentoPassivo>{{ indicador_reconhecimento_passivo | default('NAO') }}</indicadorReconhecimentoPassivo>
+          <cpfOperador>{{ cpf_operador | default('00000000191') }}</cpfOperador>
+          <numeroProcessoGeral>{{ numero_processo }}</numeroProcessoGeral>
+          <cpfCnpjCredor>{{ credor_cpf_cnpj }}</cpfCnpjCredor>
+          <classificacaoCredor>{{ credor_classificacao }}</classificacaoCredor>
+          <codigoFuncao>{{ funcao | default(4) }}</codigoFuncao>
+          <codigoSubfuncao>{{ subfuncao | default(122) }}</codigoSubfuncao>
+          <codigoPrograma>{{ programa | default(701) }}</codigoPrograma>
+          <codigoProjetoAtividade>{{ projeto_atividade | default(2043) }}</codigoProjetoAtividade>
+          <codigoSubprojetoSubatividade>{{ subprojeto | default(0) }}</codigoSubprojetoSubatividade>
+          <codigoCategoriaEconomica>{{ categoria_eco | default(3) }}</codigoCategoriaEconomica>
+          <codigoGrupoDespesa>{{ grupo_despesa | default(3) }}</codigoGrupoDespesa>
+          <codigoModalidadeDespesa>{{ modalidade | default(90) }}</codigoModalidadeDespesa>
+          <codigoElementoDespesa>{{ elemento_grp | default(39) }}</codigoElementoDespesa>
+          <codigoItem>{{ item_grp | default(1) }}</codigoItem>
+          <codigoIag>{{ iag | default('00') }}</codigoIag>
+          <codigoGrupoFonte>{{ grupo_fonte | default(1) }}</codigoGrupoFonte>
+          <codigoFonteRecurso>{{ fonte_recurso | default(10) }}</codigoFonteRecurso>
+          <codigoIpu>{{ ipu | default('01') }}</codigoIpu>
+          <valorEmpenho>{{ valor }}</valorEmpenho>
+          <codigoCc>{{ cc | default('0243') }}</codigoCc>
+        </olpPendenteCreditoNaoRegularizar>
+      </solicitacaoEmpenho>
+    </grp:gerarSolicitacaoEmpenho>
+  </soap-env:Body>
+</soap-env:Envelope>

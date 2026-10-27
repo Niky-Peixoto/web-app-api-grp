@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicitacaoAnulacaoSaldoEmpenho>
+      <gerarSolicitacaoAnulacaoSaldoEmpenho>
+        <numeroRequisicao>2026101910006</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP1.3</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <numeroEmpenho>22575</numeroEmpenho>
+        <codigoUnidadeOrcamentaria>10191</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>10190</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>1019080124</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000191</cpfOrdenadorDespesa>
+        <cpfOperador>00000000272</cpfOperador>
+        <valorAnulacaoEmpenho>500.00</valorAnulacaoEmpenho>
+        <justificativa>ANULACAO VIA API GRP - EMPENHO 22575</justificativa>
+      </gerarSolicitacaoAnulacaoSaldoEmpenho>
+    </grp:gerarSolicitacaoAnulacaoSaldoEmpenho>
+  </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:gerarSolicOrdemPagamentoBancariaResponse xmlns:ns2="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/">
+<return>
+<mensagens>
+<mensagem>
+<codigo>45820</codigo>
+<descricao>Para a Origem de Pagamento OLP Diversos o valor a pagar deve ser menor ou igual ao saldo da origem do pagamento.</descricao>
+</mensagem>
+<mensagem>
+<codigo>36944</codigo>
+<descricao>Documento 2026/57738/2026/49846 não possui saldo a pagar.</descricao>
+</mensagem>
+</mensagens>
+</return>
+</ns2:gerarSolicOrdemPagamentoBancariaResponse>
+</soap:Body>
+</soap:Envelope>

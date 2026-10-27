@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:gerarSolicOrdemPagamentoBancaria>
+      <solicitacaoOrdemPagamentoBancaria>
+        <numeroRequisicao>{{ num_requisicao }}</numeroRequisicao>
+        <identificadorProcessoExecucao>{{ identificador_processo_op | default('PGBANESC1.1.1') }}</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>{{ codigo_sistema_origem | default(51) }}</codigoSistemaOrigem>
+        <numeroArquivo>{{ numero_arquivo | default(1) }}</numeroArquivo>
+        <anoExercicioFinanceiro>{{ ano_exercicio | default(2026) }}</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>{{ uo | default(10191) }}</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>{{ orgao_executor | default(10190) }}</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>{{ ua | default(1019080124) }}</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>{{ cpf_ordenador | default('00000000191') }}</cpfOrdenadorDespesa>
+        <cpfOperador>{{ cpf_operador | default('00000000191') }}</cpfOperador>
+        <cpfCnpjCredor>{{ credor_cpf_cnpj }}</cpfCnpjCredor>
+        <classificacaoCredor>{{ credor_classificacao }}</classificacaoCredor>
+        <origemPagamento>{{ origem_pagamento | default('OLP Diversos') }}</origemPagamento>
+        <cpfCnpjCredorOP>{{ credor_cpf_cnpj }}</cpfCnpjCredorOP>
+        <classificacaoCredorDaOP>{{ credor_classificacao }}</classificacaoCredorDaOP>
+        <tipoContaADebitar>{{ tipo_conta_a_debitar | default(1) }}</tipoContaADebitar>
+        {%- if tipo_conta_a_debitar == 2 or op_cod_banco_deb %}
+        <codigoBancoADebitar>{{ op_cod_banco_deb | default('001') }}</codigoBancoADebitar>
+        <codigoAgenciaADebitar>{{ op_ag_deb | default('1615') }}</codigoAgenciaADebitar>
+        <dvAgenciaADebitar>{{ op_dv_ag_deb | default('2') }}</dvAgenciaADebitar>
+        <codigoContaADebitar>{{ op_conta_deb | default('90004') }}</codigoContaADebitar>
+        <dvContaADebitar>{{ op_dv_conta_deb | default('6') }}</dvContaADebitar>
+        {%- endif %}
+        <codigoFormaPagamento>{{ codigo_forma_pagamento | default('001') }}</codigoFormaPagamento>
+        <tipoContaACreditar>{{ tipo_conta_a_creditar | default(1) }}</tipoContaACreditar>
+        <codigoBancoACreditar>{{ op_cod_banco_cred | default('001') }}</codigoBancoACreditar>
+        <codigoAgenciaACreditar>{{ op_ag_cred | default('1615') }}</codigoAgenciaACreditar>
+        {%- if op_dv_ag_cred %}
+        <dvAgenciaACreditar>{{ op_dv_ag_cred }}</dvAgenciaACreditar>
+        {%- endif %}
+        <codigoContaACreditar>{{ op_conta_cred | default('90004') }}</codigoContaACreditar>
+        <dvContaACreditar>{{ op_dv_conta_cred | default('0') }}</dvContaACreditar>
+        <valorTotalAPagarDaOP>{{ valor_liquido | default(valor) }}</valorTotalAPagarDaOP>
+        <valorLiquidoPagamento>{{ valor_liquido | default(valor) }}</valorLiquidoPagamento>
+        <dataProgramadaPagamento>{{ data_programada_pagamento | default('2026-08-20T00:00:00') }}</dataProgramadaPagamento>
+        <justificativa>{{ justificativa }}</justificativa>
+        <finalidadePagamento>{{ finalidade_pagamento | default('01') }}</finalidadePagamento>
+        <itemDePagamentoList>
+          <ItemDePagamento>
+            <itemDePagamento>{{ item_de_pagamento | default(1) }}</itemDePagamento>
+            <anoNumeroDaOlpEEmpenho>{{ ano_numero_olp_empenho | default('2026/' + (numero_olp | default('30001') | string)) }}</anoNumeroDaOlpEEmpenho>
+            <valorAPagar>{{ valor_liquido | default(valor) }}</valorAPagar>
+            <valorTotalAPagar>{{ valor_liquido | default(valor) }}</valorTotalAPagar>
+            <valorLiquido>{{ valor_liquido | default(valor) }}</valorLiquido>
+          </ItemDePagamento>
+        </itemDePagamentoList>
+      </solicitacaoOrdemPagamentoBancaria>
+    </grp:gerarSolicOrdemPagamentoBancaria>
+  </soap-env:Body>
+</soap-env:Envelope>

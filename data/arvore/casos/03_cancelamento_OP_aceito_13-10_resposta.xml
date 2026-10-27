@@ -1,0 +1,20 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:cancelarOrdemPagamentoBancariaResponse xmlns:ns2="http://interfaces.webservices.escritural.bancario.pagamento.business.grp.prodemge.gov.br/">
+<return>
+<numeroRequisicao>1345468423</numeroRequisicao>
+<codigoSistemaOrigem>51</codigoSistemaOrigem>
+<anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+<numeroSolicitacaoDeCancelamentoOP>67446</numeroSolicitacaoDeCancelamentoOP>
+<situacaoSolicitacao>Concluída</situacaoSolicitacao>
+<dataHora>2026-10-13T17:11:59.436-03:00</dataHora>
+<mensagemResponseList>
+<Mensagem>
+<codigo>54533</codigo>
+<descricao>Solicitação de cancelamento gerada com sucesso</descricao>
+</Mensagem>
+</mensagemResponseList>
+</return>
+</ns2:cancelarOrdemPagamentoBancariaResponse>
+</soap:Body>
+</soap:Envelope>

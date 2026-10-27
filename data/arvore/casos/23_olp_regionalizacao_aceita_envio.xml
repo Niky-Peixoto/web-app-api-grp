@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<soap-env:Envelope xmlns:grp="http://interfaces.webservices.empenho.business.grp.prodemge.gov.br/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap-env:Body>
+    <grp:solicitarOLP>
+      <solicitacaoOlp>
+        <numeroRequisicao>1786628290</numeroRequisicao>
+        <identificadorProcessoExecucao>EMPOLP2.1</identificadorProcessoExecucao>
+        <codigoSistemaOrigem>51</codigoSistemaOrigem>
+        <anoExercicioFinanceiro>2026</anoExercicioFinanceiro>
+        <codigoUnidadeOrcamentaria>20071</codigoUnidadeOrcamentaria>
+        <codigoOrgaoExecutor>20070</codigoOrgaoExecutor>
+        <codigoUnidadeAdministrativa>2007080001</codigoUnidadeAdministrativa>
+        <cpfOrdenadorDespesa>00000000000</cpfOrdenadorDespesa>
+        <cpfOperador>00000000000</cpfOperador>
+        <mesCompetenciaDespesa>8</mesCompetenciaDespesa>
+        <anoCompetenciaDespesa>2026</anoCompetenciaDespesa>
+        <justificativa>DESPESA REGIONALIZADA PROJETO APQ FAPEMIG SEM RETENCAO</justificativa>
+        <OlpDeEmpenho>
+          <numeroDocumentoEmpenho>41943</numeroDocumentoEmpenho>
+          <cpfCredorBeneficiario>00000000000</cpfCredorBeneficiario>
+          <tipoClassificacaoCredor>SERVIDOR PÚBLICO ESTADUAL</tipoClassificacaoCredor>
+        </OlpDeEmpenho>
+        <ValoresDaOlp>
+          <valorBrutoOlp>1.00</valorBrutoOlp>
+          <valorLiquido>1.00</valorLiquido>
+        </ValoresDaOlp>
+        <regionalizacaoDespesaOlpRequestList>
+          <RegionalizacaoDespesa>
+            <codigoMunicipio>3106200</codigoMunicipio>
+            <valorDistribuicao>1.00</valorDistribuicao>
+          </RegionalizacaoDespesa>
+        </regionalizacaoDespesaOlpRequestList>
+      </solicitacaoOlp>
+    </grp:solicitarOLP>
+  </soap-env:Body>
+</soap-env:Envelope>
